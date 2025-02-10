@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Htmx app</title>
+    <script src="https://unpkg.com/htmx.org@2.0.4" integrity="sha384-HGfztofotfshcF7+8n44JQL2oJmowVChPTg48S+jvZoztPfvwD79OC/LTtG6dMp+" crossorigin="anonymous"></script>
+    <style>
+        a:link{
+            color: #aac;
+        }
+        a:visited{
+            color: #aac;
+        }
+        a{
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body style="margin: 0px; background-color: #333; color: white; text-decoration-color: #aaa; margin: auto;">
+    <header style="height: 5vh; text-align: center;">
+        <p style="margin: 0px; padding: 1em;">Welcome to simple htmx app</p>
+        <nav>
+            <button 
+            hx-get="/home" hx-target="#target"
+            >Home</button>
+
+            <button
+             hx-get="/weather" hx-target="#target"
+             >Weather</button>
+
+            <button
+             hx-get="/about" hx-target="#target"
+             >About</button>
+        </nav>
+    </header>
+    <main id="target" style="height: 80vh; width: 50%; margin: auto;  margin-top: 2em;">Here goes content loaded by htmx</main>
+    <footer style="height: 5vh; text-align: center;">Made by MlodziutkiS <a href="https://github.com/MlodziutkiS" target="_blank">Github</a></footer>
+</body>
+</html>
